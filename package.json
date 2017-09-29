@@ -1,0 +1,15 @@
+{
+  "name": "quill-shady",
+  "version": "0.0.0",
+  "description": "Quill for ShadyDOM",
+  "scripts": {
+    "release": "standard-version"
+  },
+  "main": "dist/quill.js",
+  "repository": "https://LasaleFamine/quill-shady",
+  "author": "Alessio Occhipinti <info@godev.space> (https://godev.space)",
+  "license": "MIT",
+  "devDependencies": {
+    "standard-version": "4.2.0"
+  }
+}
