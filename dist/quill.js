@@ -7026,10 +7026,15 @@ var BaseTheme = function (_Theme) {
 
     var listener = function listener(e) {
       if (!document.body.contains(quill.root)) {
+
         return document.body.removeEventListener('click', listener);
       }
-      if (_this.tooltip != null && !_this.tooltip.root.contains(e.target) && document.activeElement !== _this.tooltip.textbox && !_this.quill.hasFocus()) {
-        _this.tooltip.hide();
+      if (_this.tooltip != null &&
+          !_this.tooltip.root.contains(e.target) &&
+          document.activeElement !== _this.tooltip.textbox &&
+          !_this.quill.hasFocus()) {
+        /** CHANGES */
+        // _this.tooltip.hide();
       }
       if (_this.pickers != null) {
         _this.pickers.forEach(function (picker) {
@@ -9482,7 +9487,7 @@ var SnowTooltip = function (_BaseTooltip) {
           delete _this3.linkRange;
         }
         event.preventDefault();
-        _this3.hide();
+        /** CHANGES */
       });
       this.quill.on(_emitter2.default.events.SELECTION_CHANGE, function (range, oldRange, source) {
         if (range == null) return;
